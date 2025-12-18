@@ -11,7 +11,7 @@ public class ClientRepository {
     // Singleton
     private static ClientRepository instance;
 
-    private final Map<String, Client> clients;
+    private Map<String, Client> clients;
 
     private ClientRepository() {
         clients = new HashMap<>();
@@ -44,5 +44,9 @@ public class ClientRepository {
 
     public void updateClient(Client client) {
         clients.put(client.getNif(), client);
+    }
+
+    public void deleteAll() {
+        clients = new HashMap<>();
     }
 }

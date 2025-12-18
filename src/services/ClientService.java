@@ -1,6 +1,8 @@
 package services;
 
 import features.Client;
+
+import java.util.ArrayList;
 import java.util.List;
 import repository.ClientRepository;
 
@@ -18,6 +20,7 @@ public class ClientService {
 
     public List<Client> obtenerTodosLosClientes() {
         // To be implemented
+        return new ArrayList<Client>();
     }
 
     public void crearCliente(Client client) {
@@ -30,5 +33,9 @@ public class ClientService {
 
     public void modificarCliente(Client client) {
         // To be implemented
+    }
+
+    public void resetearClientes() {
+        repository.deleteAll();
     }
 }

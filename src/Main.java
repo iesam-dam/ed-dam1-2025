@@ -36,6 +36,9 @@ public class Main {
                     borrarCliente(clientService);
                     break;
                 case 6:
+                    resetearClientes(clientService);
+                    break;
+                case 7:
                     salir = true;
                     System.out.println("Hasta pronto.");
                     break;
@@ -54,7 +57,8 @@ public class Main {
         System.out.println("3. Alta de cliente");
         System.out.println("4. Modificar cliente");
         System.out.println("5. Borrar cliente");
-        System.out.println("6. Salir");
+        System.out.println("6. Borrar todos los clientes");
+        System.out.println("7. Salir");
     }
 
     private static void buscarCliente(ClientService clientService) {
@@ -83,6 +87,10 @@ public class Main {
 
     }
 
+    private static void resetearClientes(ClientService clientService) {
+        clientService.resetearClientes();
+        System.out.println("BD reseteada");
+    }
     /// Lee un numero del teclado
     private static int leerEntero(String mensaje) {
         while (true) {
