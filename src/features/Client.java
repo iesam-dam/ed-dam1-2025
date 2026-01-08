@@ -90,7 +90,7 @@ public class Client {
     // Para imprimir el cliente de forma sencilla
     @Override
     public String toString() {
-        return "Cliente{"+
+        return "Cliente {"+
                 " nombre='" + nombre + '\'' +
                 ", apellidos='" + apellidos + '\'' +
                 ", nif='" + nif + '\'' +

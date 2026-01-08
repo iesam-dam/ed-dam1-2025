@@ -1,6 +1,8 @@
 package services;
 
 import features.Client;
+
+import java.util.ArrayList;
 import java.util.List;
 import repository.ClientRepository;
 
@@ -17,11 +19,11 @@ public class ClientService {
     }
 
     public List<Client> obtenerTodosLosClientes() {
-        // To be implemented
+        return new ArrayList<>();
     }
 
     public void crearCliente(Client client) {
-        // Implementar la lógica de creación, validar antes que el nif viene relleno.
+        repository.addClient(client);
     }
 
     public void eliminarCliente(String nif) {
